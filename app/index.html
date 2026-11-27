@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cartwise — Black Friday 2026 Deal Finder, Checked by Hand</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <div class="brand-block">
+      <p class="brand-mark">Cartwise</p>
+      <p class="brand-tag">The Black Friday deal finder that shows its working.</p>
+    </div>
+    <div class="header-side">
+      <p class="checked-stamp" id="checked-stamp">Checked Fri 27 Nov 2026</p>
+      <p class="header-note">Every price below was read today at the store named, or in the deals source named on its card. If a sale is routine, the card says so.</p>
+    </div>
+  </div>
+  <p class="stat-strip" id="stat-strip"></p>
+</header>
+
+<main>
+  <section class="controls" aria-label="Deal finder controls">
+    <label class="search-label" for="search-input">Search the checked deals</label>
+    <input id="search-input" type="search" placeholder="Try &quot;airpods&quot;, &quot;lego&quot;, &quot;oled&quot;&hellip;" autocomplete="off">
+    <div class="chip-row" id="category-chips" role="group" aria-label="Filter by category"></div>
+    <div class="select-row">
+      <label>Store
+        <select id="store-select"></select>
+      </label>
+      <label>Discount at least
+        <select id="discount-select">
+          <option value="0">Any discount</option>
+          <option value="20">20% off or more</option>
+          <option value="30">30% off or more</option>
+          <option value="40">40% off or more</option>
+          <option value="50">50% off or more</option>
+        </select>
+      </label>
+      <label>Sort by
+        <select id="sort-select">
+          <option value="discount">Biggest discount</option>
+          <option value="saving">Biggest saving ($)</option>
+          <option value="price-low">Lowest price</option>
+          <option value="price-high">Highest price</option>
+        </select>
+      </label>
+    </div>
+    <p class="result-count" id="result-count"></p>
+  </section>
+
+  <section class="grid-section" aria-label="Deals">
+    <div class="deal-grid" id="deal-grid"></div>
+  </section>
+
+  <section class="compare-section" id="compare" aria-label="Same product, several stores">
+    <h2 class="section-title">Same product, several stores</h2>
+    <p class="section-intro">Five products we checked at more than one store on the same morning. Where the price ties, the card says so — pick by stock and pickup, not by a phantom saving.</p>
+    <div id="compare-list"></div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p><strong>How Cartwise checks a deal.</strong> We read each price at the store itself or in a deals source that names the store, on the morning stamped on every card, and we print the source beside the price. The discount on a card is always the discount the two prices on that card imply — no rounded-up percentages, no prices from before Black Friday week. A verdict is our honest call: a new low, a strong price, or a routine sale wearing a Black Friday badge.</p>
+  <p class="footer-fine">Prices were live when checked and can move; the store page is the final word. Cartwise is an independent deal finder and is not affiliated with any store it lists.</p>
+</footer>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
